@@ -1,0 +1,103 @@
+body {
+    background-color: linear-gradient( 197deg, rgb(252, 115, 156) 0%, rgb(252, 115, 156) 0%, rgb(253, 252, 253) 0%, rgb(242, 250, 253) 0%);
+    font-family: "Patrick Hand", cursive;
+    max-width: 1000px;
+    margin: 100px auto;
+    border: 2px solid #67a9b2;
+    border-radius: 4px;
+}
+
+.cityEntered {
+    text-align: center;
+    font-size: 100px;
+    color: #67a9b2;
+    margin-top: 30px;
+}
+
+form {
+    display: block;
+    text-align: center;
+    margin: 20px;
+}
+
+.enterCityInput {
+    padding: 0px 75px;
+    border: 2px solid #67a9b2;
+    border-radius: 4px;
+    font-size: 20px;
+    box-shadow: 16px 13px 22px rgba(38, 132, 146, 0.2);
+    background-color: #f6f6f8;
+    position: relative;
+    top: 25px;
+}
+
+.searchButton {
+    padding: 0px 5px;
+    border: 2px solid #67a9b2;
+    border-radius: 4px;
+    font-size: 20px;
+    box-shadow: 16px 13px 22px rgba(38, 132, 146, 0.2);
+    background-color: #f6f6f8;
+    position: relative;
+    top: 25px;
+}
+
+.searchButton:hover {
+    transition: 0.2s ease-in;
+    background-color: #67a9b2;
+}
+
+.centerInfo {
+    display: block;
+    text-align: center;
+}
+
+#currentTemp {
+    font-size: 140px;
+    text-align: center;
+    color: #67a9b2;
+    margin: 65px;
+}
+
+#currentDay {
+    position: relative;
+    bottom: 200px;
+    font-size: 25px;
+    right: 150px;
+}
+
+#currentTime {
+    position: relative;
+    bottom: 200px;
+    font-size: 25px;
+    right: 150px;
+}
+
+#currentHumidity {
+    position: relative;
+    bottom: 200px;
+    font-size: 25px;
+    left: 150px;
+}
+
+#currentWind {
+    position: relative;
+    bottom: 200px;
+    font-size: 25px;
+    left: 150px;
+}
+
+footer {
+    position: relative;
+    left: 20px;
+    text-decoration: none;
+}
+
+.linkGit {
+    text-decoration: none;
+    color: black;
+}
+
+.linkGit:hover {
+    cursor: pointer;
+}

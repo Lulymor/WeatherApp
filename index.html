@@ -10,14 +10,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <title>WeatherApp</title>
 </head>
 
 <body>
-    <container>
-        <h1>Hello World</h1>
-    </container>
-    <script src="src/java.js"></script>
-</body>
+    <div class="container" id="app.wrapper">
+        <h1 class="cityEntered">New York</h1>
+        <form>
+            <input class="enterCityInput" type="text" placeholder="Enter a city.." />
+            <input class="searchButton" type="submit" value="Submit" />
+        </form>
+        <div class="centerInfo">
+            <div class="row align-items-start">
+                <div class="col" id="currentTemp">30°C</div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col" id="currentDay">Friday</div>
 
+                <div class="col" id="currentHumidity">Humidity: 65%</div>
+            </div>
+            <div class="row align-items-end">
+                <div class="col" id="currentTime">5:54PM</div>
+                <div class="col" id="currentWind">Wind: 2 m/h</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Open-sourced code by
+        <a class="linkGit" href="https://github.com/Lulymor " target="_blank">
+        Luana Moreira</a
+      >
+    </footer>
+
+    <script src="src/java.js "></script>
+  </body>
 </html>
