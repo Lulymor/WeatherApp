@@ -85,3 +85,24 @@ function callLocation() {
 
 let currentButton = document.querySelector("#current-location-button");
 currentButton.addEventListener("click", callLocation);
+///
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class ="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+    <div id="forecast-day">${day}</div>
+    <img src="src/images/cloud.png" alt="" id="forecast-icon" />
+    <div class="weather-forecast-temps">
+    <span id="forecast-temp-max">35°</span> | 
+    <span id="forecast-temp-min">20°</span>
+    </div>
+    </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+displayForecast();
