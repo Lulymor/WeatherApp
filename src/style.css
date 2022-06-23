@@ -59,18 +59,19 @@ h1 {
   font-size: 45px;
   font-weight: bolder;
   position: relative;
-  top: 65px;
+  top: 100px;
   left: 100px;
 }
 #weather-icon {
   width: 10%;
   position: relative;
-  left: 350px;
+  left: 420px;
   margin: 20px;
+  top: 50px;
 }
 p {
   position: relative;
-  bottom: 80px;
+  bottom: 25px;
   left: 100px;
   color: #7c7c7c;
   font-size: 16px;
@@ -79,9 +80,15 @@ p {
 .col.temp {
   font-size: 50px;
   position: relative;
-  bottom: 80px;
+  bottom: 50px;
   left: 100px;
   color: black;
+}
+#units {
+  font-size: 25px;
+  position: relative;
+  bottom: 100px;
+  left: 155px;
 }
 
 li {
@@ -92,8 +99,8 @@ li {
 .data {
   color: #7c7c7c;
   position: relative;
-  left: 200px;
-  bottom: 150px;
+  left: 750px;
+  bottom: 200px;
 }
 
 a {

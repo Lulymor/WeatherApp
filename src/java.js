@@ -23,7 +23,7 @@ let currentDate = document.querySelector("#date-time");
 currentDate.innerHTML = `${day} ${currentHour}:${currentMin}`;
 ///
 function showTemperature(response) {
-  let tempC = Math.round(response.data.main.temp);
+  celciusTemp = Math.round(response.data.main.temp);
   let tempDisplayed = document.querySelector("#temp-displayed");
 
   let currentWind = Math.round(response.data.wind.speed);
@@ -34,7 +34,7 @@ function showTemperature(response) {
   let weatherIcon = document.querySelector("#weather-icon");
 
   console.log(response);
-  tempDisplayed.innerHTML = `${tempC}°C`;
+  tempDisplayed.innerHTML = `${celciusTemp}`;
   currentDescription.innerHTML = response.data.weather[0].description;
   humidityDisplayed.innerHTML = `Humidity: ${currentHumidity} %`;
   windDisplayed.innerHTML = `Wind: ${currentWind} km/h`;
@@ -67,7 +67,7 @@ form.addEventListener("submit", city);
 function showTemp(response) {
   let currentTempC = Math.round(response.data.main.temp);
   let currentTemp = document.querySelector("#temp-displayed");
-  currentTemp.innerHTML = `${currentTempC}°C`;
+  currentTemp.innerHTML = `${currentTempC}`;
   let currentWind = Math.round(response.data.wind.speed);
   let windDisplayed = document.querySelector("#wind");
   windDisplayed.innerHTML = `Wind: ${currentWind} km/h`;
@@ -125,3 +125,25 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 displayForecast();
+///
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let Ftemp = (celciusTemp * 9) / 5 + 32;
+  let temperature = document.querySelector("#temp-displayed");
+  temperature.innerHTML = Math.round(Ftemp);
+}
+
+let celciusTemp = null;
+
+let fahrenheitButton = document.querySelector("#fahrenheit-button");
+fahrenheitButton.addEventListener("click", displayFahrenheitTemp);
+
+function displaycelsiusTemp(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#temp-displayed");
+  temperature.innerHTML = Math.round(celciusTemp);
+}
+let celsiustButton = document.querySelector("#celsius-button");
+celsiustButton.addEventListener("click", displaycelsiusTemp);
+
+///
